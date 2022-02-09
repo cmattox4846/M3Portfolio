@@ -28,7 +28,7 @@
 }
 
 .profile-details-role h1 {
-    font-size: 30px;
+    font-size: 40px;
     font-family: cursive;
 }
 .primary-text{
@@ -67,7 +67,7 @@
 .profile-picture-background{
     height: 92%;
     width: 92%;
-    background-image: url('../../../Assets/Home/profilephoto.jpg');
+    background-image: url('../../../Assets/Home/profilepic.jpg');
     background-size: cover;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -98,8 +98,8 @@
      .profile-details-name{
          font-size: 20px;
      }
-     .profile-details-role .primary-text{
-         font-size: 12px;
+     .profile-details-role h1 {
+         font-size: 20px;
      }
      .profile-options .btn{
          width: 120px;
