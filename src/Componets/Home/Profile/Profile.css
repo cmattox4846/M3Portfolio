@@ -28,10 +28,11 @@
 }
 
 .profile-details-role h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-family: cursive;
 }
 .primary-text{
+    
     color:(--white);
 }
 .highlighted-text{
@@ -93,6 +94,7 @@
     .profile-picture{
         margin: 0 0 0 80px;
      }
+     
      .profile-details-name{
          font-size: 20px;
      }
@@ -112,6 +114,7 @@
         width: 320px;
         margin: 0 0 0 4px;
      }
+     
     
 }
 @media screen and (max-width:810px)
@@ -121,6 +124,7 @@
         width: 320px;
         margin: 0 !important;
      }
+     
     .profile-parent{
         flex-direction: column-reverse;
         margin: 40px 0 0 0;
@@ -139,6 +143,7 @@
      }
      .profile-options .profile-details-role{
          text-align: center;
+         
      }
 
     }
@@ -149,8 +154,9 @@
         width: 275px ;
         margin-top: -90px;
     }
+    
     .profile-details{
-        width: 90%;
+        width: 95%;
     }
 }
 

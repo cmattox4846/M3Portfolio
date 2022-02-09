@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactTypical } from "@deadcoder0904/react-typical";
 import "./Profile.css"
+import '@deadcoder0904/react-typical/dist/styles.min.css'
 
 export default function Profile() {
   return (
@@ -31,7 +32,7 @@ export default function Profile() {
           <div className="profile-details-name">
             <span className="primary-text">
               {""}
-              Hello, I'M <span className="highlighted-text">Chris</span>
+              Hello, I'm <span className="highlighted-text">Chris Mattox</span>
             </span>
           </div>
           <div className="profile-details-role">
@@ -43,15 +44,15 @@ export default function Profile() {
                   loop={Infinity}
                   steps={[
                     "Enthusiastic Dev ",
-                    1000,
-                    "Full Stack Devloper 🚀",
-                    1000,
+                    2000 ,
+                    "Full Stack Developer ",
+                    2000 ,
                     "MERN Stack Developer",
-                    1000,
-                    "React/React Native Dev",
-                    1000,
+                    2000 ,
+                    "React/React Native Dev"	,
+                    2000 ,
                     "Cross Platform Dev",
-                    1000,
+                    2000 ,
                   ]}
                 />
               </h1>
