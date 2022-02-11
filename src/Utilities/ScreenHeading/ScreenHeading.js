@@ -1,7 +1,7 @@
 import React from 'react';
-import "./ScreennHeading.css"
+import "./ScreenHeading.css"
 
-export default function ScreennHeading(props) {
+export default function ScreenHeading(props) {
   return <div className='heading-container'>
       <div className='screen-heading'>
           <span>{props.title}</span>
