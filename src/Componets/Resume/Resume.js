@@ -20,18 +20,18 @@ export default function Resume(props) {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading" >
-            <div className="heading-bullet">
+            <div className="heading-bullet"></div>
                 <span>{props.heading ? props.heading : " "}</span>
-            <div className="heading-date">2021-2021</div>
-            {/* {props.fromDate && props.toDate ? 
+            
+            {props.fromDate && props.toDate ? 
             (
               <div className="heading-date"> 
-                {props.fromDate + " " + props.toDate}
+                {props.fromDate + "-" + props.toDate}
               </div>
             ) :
             (
               <div></div>
-            )} */}
+            )} 
             </div>
          
           <div className="resume-sub-heading">
@@ -41,7 +41,7 @@ export default function Resume(props) {
             <span> {props.description ? props.description : ""}</span>
           </div>
         </div>
-      </div>
+     
     );
   };
 
@@ -151,16 +151,16 @@ export default function Resume(props) {
     >
       {programmingSkillDetails.map((skill, index) => (
         <div className="skill-parent" key={index}>
-          <div className="heading-bullet">
+          <div className="heading-bullet"></div>
             <span>{skill.skill}</span>
-            <div className="skill-precentage">
+            <div className="skill-percentage">
               <div
                 style={{ width: skill.ratingPercentage + "%" }}
-                className="active-precentage"
+                className="active-percentage-bar"
               ></div>
             </div>
           </div>
-        </div>
+        
       ))}
     </div>,
 
