@@ -33,6 +33,10 @@
     max-width: 100%;
 
 }
+.resume-description-text {
+    font-size: 12px;
+    
+  }
 .resume-details-carousal{
     transition: transform 1s ease-out;
 }
@@ -88,11 +92,14 @@ width: 100%;
 .resume-screen-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     height: 360px;
     width: 100%;
     
 }
+.projectLink {
+    color: #9E768F;
+  }
 
 .resume-heading{
     display: flex;
@@ -107,7 +114,7 @@ width: 100%;
     
 }
 .resume-main-heading span {
-    color: var(--dark-orange);
+    color: #1f2235;
     font-size: 16px;
     font-family: "Poppins SemiBold";
   }

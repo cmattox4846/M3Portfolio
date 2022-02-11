@@ -65,26 +65,46 @@ export default function Resume(props) {
   ];
 
   const projectsDetails = [
-    {
-      title: "Personal Portfolio Website",
-      duration: { fromDate: "2021", toDate: "2022" },
-      description:
-        "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: React JS, Bootsrap.",
-    },
+    // {
+    //   title: "Personal Portfolio Website",
+    //   duration: { fromDate: "2021  ", toDate: "  2022" },
+    //   description:
+    //     "A Personal Portfolio website to showcase all my details and projects at one place.",
+    //   subHeading:<p> Technologies Used: React JS, Bootsrap.
+    //       <br/>
+    //       <a href='https://github.com/cmattox4846/M3Portfolio'><i className="fa fa-github-square projectLink">&nbsp; Repo</i></a>
+    // </p>,
+    // },
     {
       title: "KnowYourRep",
-      duration: { fromDate: "2021", toDate: "2021" },
+      duration: { fromDate: "2021 ", toDate: " 2021" },
       description:
         "KnowYourRep is an application that allows novice users to keep informed about how well their elected officials are adhering to the platforms in which they were elected. ",
-      subHeading: "Technologies Used: React JS, Bootsrap.!#$!@#$!@#$!@#$",
+      subHeading: <p>
+      Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.
+      <br />
+      <a href='https://github.com/cmattox4846/KnowYourRep'><i className="fa fa-github-square projectLink"> &nbsp; Frontend Repo</i></a>
+      
+      &nbsp;&nbsp;||&nbsp;&nbsp;
+      <a href='https://github.com/cmattox4846/KnowYourRep-API'><i className="fa fa-github-square projectLink"> &nbsp; Backend Repo</i></a>
+      &nbsp;&nbsp;||&nbsp;&nbsp;
+      <a href='https://www.youtube.com/watch?v=I_87SmwHGUA'><i className="fa fa-play-circle icon projectLink"> 
+      &nbsp; Watch Demo</i></a>
+    </p>,
     },
     {
       title: "GoodGet Eccommerce Website",
-      duration: { fromDate: "2021", toDate: "2021" },
+      duration: { fromDate: "2021 ", toDate: " 2021" },
       description:
         "GoodGet is an e-commerce application that allows users to buy and sell items in a p2p sales experience.",
-      subHeading: "Technologies Used: React JS, Bootsrap.@#!@#!@#%!@#%!@#",
+      subHeading: <p>
+      Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.
+      <br />
+      <a href='https://github.com/cmattox4846/KnowYourRep'><i className="fa fa-github-square projectLink"> &nbsp; Frontend Repo</i></a>
+      
+      &nbsp;&nbsp;||&nbsp;&nbsp;
+      <a href='https://github.com/cmattox4846/KnowYourRep-API'><i className="fa fa-github-square projectLink"> &nbsp; Backend Repo</i></a>
+      </p>
     },
   ];
 
@@ -93,20 +113,20 @@ export default function Resume(props) {
       <ResumeHeading
         heading={"devCodeCamp"}
         subHeading={"FullStack Software Development Certification"}
-        fromDate={"2021"}
-        toDate={"2021"}
+        fromDate={"2021 "}
+        toDate={" 2021"}
       />
       <ResumeHeading
         heading={"Western International University "}
-        subHeading={"B.S. -  Business Minor in Information Technology "}
-        fromDate={"2008"}
-        toDate={"2012"}
+        subHeading={"B.S. -  Business Minor in Information Technology"}
+        fromDate={"2008 "}
+        toDate={" 2012"}
       />
       <ResumeHeading
         heading={"Community College of the Air Force"}
         subHeading={"A.A.S. - Electronic Engineering"}
-        fromDate={"2004"}
-        toDate={"2006"}
+        fromDate={"2004  "}
+        toDate={" 2006"}
       />
     </div>,
 
@@ -114,8 +134,8 @@ export default function Resume(props) {
       <ResumeHeading
         heading={"OnPoint Market Research Group"}
         subHeading={"IT Administrator (Contractor)"}
-        fromDate={"2018"}
-        toDate={"2021"}
+        fromDate={"2018 "}
+        toDate={" 2021"}
       />
       <div className="experience-description">
         <span className="resume-description-text">
@@ -143,7 +163,42 @@ export default function Resume(props) {
           provide premier Website Design.
         </span>
       </div>
-    </div>,
+      </div>,
+    //   <div className="resume-screen-container" key="work-experience">
+    //   <ResumeHeading
+    //     heading={"Seatow"}
+    //     subHeading={"IT Administrator (Contractor)"}
+    //     fromDate={"2018"}
+    //     toDate={"2021"}
+    //   />
+    //   <div className="experience-description">
+    //     <span className="resume-description-text">
+    //       OnPoint Market Research Group is a digital market company that focuses
+    //       on led generation via sports and music venues
+    //     </span>
+    //   </div>
+    //   <div className="experience-description">
+    //     <span className="resume-description-text">
+    //       - Developed and maintained Salesforce APIs, interfaces, and Custom
+    //       database reports.
+    //     </span>
+    //     <br></br>
+    //     <span className="resume-description-text">
+    //       - Provided hardware and software support for end-users in the field.
+    //     </span>
+    //     <br />
+    //     <span className="resume-description-text">
+    //       - Interfaced with vendors and area staff to ensure proper installation
+    //       of equipment.
+    //     </span>
+    //     <br />
+    //     <span className="resume-description-text">
+    //       - Maintaining custom CSS, WordPress, and JavaScript code in order to
+    //       provide premier Website Design.
+    //     </span>
+    //   </div>
+    //   </div>,
+   
 
     <div
       className="resume-screen-container programming-skills-container"
@@ -168,11 +223,11 @@ export default function Resume(props) {
       {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
           key={index}
-          heading={projectsDetails.heading}
+          heading={projectsDetails.title}
           subHeading={projectsDetails.subHeading}
           description={projectsDetails.description}
-          fromDate={projectsDetails.fromDate}
-          toDate={projectsDetails.toDate}
+          fromDate={projectsDetails.duration.fromDate}
+          toDate={projectsDetails.duration.toDate}
         />
       ))}
     </div>,
