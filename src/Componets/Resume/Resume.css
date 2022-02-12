@@ -184,7 +184,7 @@ width: 100%;
     /* color: #ff5823; */
   }
   
-  /* IPAD PRO RESPONSIVENESS */
+  /*IPAD PRO RESPONSIVENESS */
   @media only screen and (max-width: 1110px) {
     .resume-card {
       width: 880px;
@@ -196,7 +196,7 @@ width: 100%;
   }
   
   /* IPAD RESPONSIVENESS */
-  @media only screen and (max-width: 1023px) {
+   @media only screen and (max-width: 1023px) {
     .resume-content {
       display: flex;
       flex-direction: column;
@@ -216,7 +216,7 @@ width: 100%;
       width: 90%;
     }
   
-    .resume-bullet-details {
+    .resume-bullets-details {
       height: 360px;
       padding: 0;
       width: fit-content;
@@ -230,4 +230,5 @@ width: 100%;
     .selected-bullet {
       width: 100%;
     }
-  }
+  } 
+  
