@@ -55,11 +55,11 @@ export default function Testimonial(props) {
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
-                      <i className="fa fa-qoute-left" />
+                      <i className="fa fa-quote-left" />
                       I patronized Ehizeex and when He delivered, I honestly
                       fell in love with the project He is a very honest guy and
                       he delivers ontime.
-                      <i className="fa fa-qoute-right" />
+                      <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
                       <li>
@@ -94,11 +94,11 @@ export default function Testimonial(props) {
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
-                      <i className="fa fa-qoute-left" />
+                      <i className="fa fa-quote-left" />
                       I patronized Ehizeex and when He delivered, I honestly
                       fell in love with the project He is a very honest guy and
                       he delivers ontime.
-                      <i className="fa fa-qoute-right" />
+                      <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
                       <li>
@@ -133,11 +133,11 @@ export default function Testimonial(props) {
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
-                      <i className="fa fa-qoute-left" />
+                      <i className="fa fa-quote-left" />
                       I patronized Ehizeex and when He delivered, I honestly
                       fell in love with the project He is a very honest guy and
                       he delivers ontime.
-                      <i className="fa fa-qoute-right" />
+                      <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
                       <li>
