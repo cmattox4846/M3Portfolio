@@ -235,15 +235,15 @@ export default function Resume(props) {
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
         heading="Veteran Outreach"
-        description="I am very active in the veteran community, helping fellow veteran get the benefits they deserve"
+        description="I am very active in the veteran community, helping fellow veteran get the benefits they deserve."
       />
       <ResumeHeading
-        heading="Water Sport"
+        heading="Water Sports"
         description="Spend my weekend getting my fill of the outdoors by paddleboarding, scuba diving, and working as a Seatow Boat Captain."
       />
       <ResumeHeading
         heading="Learning"
-        description="Everyday I find myself watching youtube to learn about new hobbies or how to prefect exsiting hobbies. "
+        description="Everyday I find myself watching youtube to learn about new hobbies or how to perfect exsiting skills. "
       />
     </div>,
 
