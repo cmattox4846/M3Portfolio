@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import { ReactTypical } from "@deadcoder0904/react-typical";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 import "./ContactMe.css";
 import imgBack from "../../../src/images/mailz.jpeg";
@@ -26,12 +28,39 @@ const[bool,setBool] = useState(false)
 
 const handleName=(event)=>{
     setName(event.target.value)
+
 }
 const handleEmail=(event)=>{
     setEmail(event.target.value)
 }
 const handleMessage=(event)=>{
     setMessage(event.target.value)
+}
+
+const handleSubmit= async(event)=>{
+    event.preventDefault()
+   try {
+    let data = {
+        name,
+        email,
+        message,
+    }
+    setBool(true)
+
+const response = await axios.post('./contact', data)
+     if (name.length === 0 || email.length === 0 || message.length === 0){
+         setBanner(response.data.msg)
+         toast.error(response.data.msg)
+         setBool(false)
+     }  else if (response.status === 200){
+        setBanner(response.data.msg)
+        toast.success(response.data.msg)
+        setBool(false)
+     }
+   } catch (error) {
+       console.log(error)
+       
+   } 
 }
 
 
@@ -64,9 +93,9 @@ const handleMessage=(event)=>{
         <div className="back-form">
             <div className="img-back">
                 <h4> Send Your Email Here!</h4>
-                <img src={imgBack} alt='image not found'/>
+                <img src={imgBack} alt=' not found'/>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <p>{banner}</p>
                 <label htmlFor="name">Name</label>
                 <input type='text'
@@ -82,8 +111,11 @@ const handleMessage=(event)=>{
                 onChange={handleMessage}
                 value={message}/>
                 <div className="send-btn">
-                    <button type="submit">
+                    <button type="submit" >
                         send<i className="fa fa-paper-plane"/>
+                        {bool?(<b className="load">
+                            <img src={load1} alt="no internet connection"/>
+                        </b>):("")}
                     </button>
                 </div>
             </form>
