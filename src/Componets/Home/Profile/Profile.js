@@ -11,18 +11,18 @@ export default function Profile() {
         <div className="profile-details">
           <div className="colz">
               <div className="colz-icon">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/chris-mattox2021/">
             <i className="fa fa-linkedin"></i>
           </a>
-          <a href="#">
+          <a href="https://github.com/cmattox4846">
             <i className="fa fa-github"></i>
           </a>
           {/* <a href="#">
             <i className="fa fa-instagram"></i>
           </a> */}
-          <a href="#">
+          {/* <a href="#">
             <i className="fa fa-youtube-square"></i>
-          </a>
+          </a> */}
           {/* <a href="#">
             <i className="fa fa-twitter"></i>
           </a> */}
@@ -58,8 +58,7 @@ export default function Profile() {
                 />
               </h1>
               <span className="profile-role-tageline">
-                An extreme programming (XP) practicioner who quickly delivers
-                quality products that delight customers.
+               At M3 Designs I strive to provide cutting edge application development <br/>with a focus on moving mankind into the future. 
               </span>
             </span>
           </div>

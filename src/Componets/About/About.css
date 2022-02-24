@@ -12,6 +12,9 @@
     width: 70%;
 
 }
+.highlighted-btn{
+    background-color: #2a9d8f;
+}
 
 .about-me-card{
     display: flex;
@@ -57,7 +60,7 @@
     height: 12px;
     width: 12px;
     margin: 0 10px  0 0 ;
-    background-color: #ff5823;
+    background-color: #2a9d8f;
     border-radius: 50%;
 
 }

@@ -12,6 +12,7 @@ export default function Footer() {
       >
         {" "}
         <i className="fa fa-arrow-up"></i>
+        Top
       </button>
     </div>
 

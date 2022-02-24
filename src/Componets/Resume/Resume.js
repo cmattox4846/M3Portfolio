@@ -165,40 +165,7 @@ export default function Resume(props) {
         </span>
       </div>
       </div>,
-    //   <div className="resume-screen-container" key="work-experience">
-    //   <ResumeHeading
-    //     heading={"Seatow"}
-    //     subHeading={"IT Administrator (Contractor)"}
-    //     fromDate={"2018"}
-    //     toDate={"2021"}
-    //   />
-    //   <div className="experience-description">
-    //     <span className="resume-description-text">
-    //       OnPoint Market Research Group is a digital market company that focuses
-    //       on led generation via sports and music venues
-    //     </span>
-    //   </div>
-    //   <div className="experience-description">
-    //     <span className="resume-description-text">
-    //       - Developed and maintained Salesforce APIs, interfaces, and Custom
-    //       database reports.
-    //     </span>
-    //     <br></br>
-    //     <span className="resume-description-text">
-    //       - Provided hardware and software support for end-users in the field.
-    //     </span>
-    //     <br />
-    //     <span className="resume-description-text">
-    //       - Interfaced with vendors and area staff to ensure proper installation
-    //       of equipment.
-    //     </span>
-    //     <br />
-    //     <span className="resume-description-text">
-    //       - Maintaining custom CSS, WordPress, and JavaScript code in order to
-    //       provide premier Website Design.
-    //     </span>
-    //   </div>
-    //   </div>,
+   
    
 
     <div
@@ -220,7 +187,7 @@ export default function Resume(props) {
       ))}
     </div>,
 
-    <div className="resume-screen-container fade-in" key="projects">
+    <div className="resume-screen-container" key="projects">
       {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
           key={index}
@@ -302,7 +269,7 @@ export default function Resume(props) {
   };
 
   return (
-    <div className="resume-container screen-container" id={props.id || ""}>
+    <div className="resume-container screen-container fade-in" id={props.id || ""}>
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
         <div className="resume-card">

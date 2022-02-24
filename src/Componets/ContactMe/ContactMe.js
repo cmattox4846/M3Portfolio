@@ -57,6 +57,11 @@ const response = await axios.post('./contact', data)
         setBanner(response.data.msg)
         toast.success(response.data.msg)
         setBool(false)
+      setName("")
+      setEmail("")
+      setMessage("")
+
+      
      }
    } catch (error) {
        console.log(error)
@@ -75,18 +80,18 @@ const response = await axios.post('./contact', data)
             {""}
             <ReactTypical loop={Infinity} steps={["Get In Touch ", 2000, "How Can I Work For You? ", 2000]} />
           </h2>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/chris-mattox2021/">
             <i className="fa fa-linkedin"></i>
           </a>
-          <a href="#">
+          <a href="https://github.com/cmattox4846">
             <i className="fa fa-github"></i>
           </a>
           {/* <a href="#">
             <i className="fa fa-instagram"></i>
           </a> */}
-          <a href="#">
+          {/* <a href="#">
             <i className="fa fa-youtube-square"></i>
-          </a>
+          </a> */}
           {/* <a href="#">
             <i className="fa fa-twitter"></i>
           </a> */}
