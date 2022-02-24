@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Total_Screens, Get_Screen_Index } from '../../../Utilities/CommonUtilities';
 import ScrollService from '../../../Utilities/ScrollService';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -18,51 +18,43 @@ export default function Header() {
         return;
     }
 
-    let currentScreenSubscription = ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen)
+    let currentScreenSubscription = ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen)
  
 
-    const getHeaderOptions=()=>{
-        return(
-            Total_Screens.map((screen, i)=> 
-            (
-                
-                <div key={screen.screen_name} className={getHeaderOptionsClass(i)}
-                
-                onClick= {()=> switchScreen(i,screen)}>
-                    <span>{screen.screen_name}</span>
-                </div>
-            )
+    const getHeaderOptions = () => {
+        return Total_Screens.map((Screen, i) => (
+          <div
+            key={Screen.screen_name}
+            className={getHeaderOptionsClass(i)}
+            onClick={() => switchScreen(i, Screen)}
+          >
+            <span>{Screen.screen_name}</span>
+          </div>
+        ));
+      };
 
-            )
-        )
-    }
-
-    const getHeaderOptionsClass=(index)=>
-        
-        {
-        let classes = "header-option";
-        // console.log("this is the index" + index)
-        // console.log("total"+ Total_Screens.length)
-        console.log(selectedScreen+ "selected is")
-            if(index < Total_Screens.length )
-                classes += " header-option-seperator";
-
-            if(selectedScreen === index)
-            classes += " selected-header-option";
-            
-           
-        return classes
-        }
-
-    const switchScreen = (index, screen)=>{
-        let screenComponent = document.getElementById(screen.screen_name)
-        if(!screenComponent)
-        return
-
-        screenComponent.scrollIntoView({behavior:'smooth'});
-        setSelectedScreen(index)
-        setShowHeaderOptions(false)
-    }
+      const getHeaderOptionsClass = (index) => {
+        let classes = "header-option ";
+        if (index < Total_Screens.length - 1) classes += "header-option-seperator ";
+    
+        if (selectedScreen === index) classes += "selected-header-option ";
+    
+        return classes;
+      };
+    
+      const switchScreen = (index, screen) => {
+        let screenComponent = document.getElementById(screen.screen_name);
+        if (!screenComponent) return;
+    
+        screenComponent.scrollIntoView({ behavior: "smooth" });
+        setSelectedScreen(index);
+        setShowHeaderOptions(false);
+      };
+    useEffect(() => {
+        return () => {
+          currentScreenSubscription.unsubscribe();
+        };
+      }, [currentScreenSubscription]);
  
  return <div>
 <div className='header-container' onClick={()=> setShowHeaderOptions(!showHeaderOptions)}>

@@ -1,8 +1,7 @@
-.home-container{
+.home-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* height: 50vh !important; */
+    /* justify-content:space-evenly; */
     min-height: 670px;
-    background-image: url("../../Assets/Home/bg.jpg");
+      background-image: url("../../Assets/Home/bg.jpg");
 }

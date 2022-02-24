@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactTypical } from "@deadcoder0904/react-typical";
+import ScrollService from "../../../Utilities/ScrollService";
 import "./Profile.css"
 import '@deadcoder0904/react-typical/dist/styles.min.css'
 
@@ -10,22 +11,22 @@ export default function Profile() {
         <div className="profile-details">
           <div className="colz">
               <div className="colz-icon">
-             < a href="#">
-              <i className="fa fa-facebook-square"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-google-plus"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-youtube-square"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-twitter"></i>
-            </a>
-              </div>
+              <a href="#">
+            <i className="fa fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i className="fa fa-github"></i>
+          </a>
+          {/* <a href="#">
+            <i className="fa fa-instagram"></i>
+          </a> */}
+          <a href="#">
+            <i className="fa fa-youtube-square"></i>
+          </a>
+          {/* <a href="#">
+            <i className="fa fa-twitter"></i>
+          </a> */}
+          </div>
 
             
           </div>
@@ -63,7 +64,7 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn">
+            <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
               {""}
               Hire Me{" "}
             </button>

@@ -2,6 +2,7 @@ import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../Animations";
 import React, { useState } from "react";
+import Footer from "../Home/Footer/Footer";
 import "./Resume.css";
 
 export default function Resume(props) {
@@ -9,7 +10,7 @@ export default function Resume(props) {
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
+    if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
 
@@ -219,7 +220,7 @@ export default function Resume(props) {
       ))}
     </div>,
 
-    <div className="resume-screen-container" key="projects">
+    <div className="resume-screen-container fade-in" key="projects">
       {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
           key={index}
@@ -313,6 +314,9 @@ export default function Resume(props) {
           </div>
           <div className="resume-bullets-details">{getResumeScreens()}</div>
         </div>
+      </div>
+      <div>
+      <Footer />
       </div>
     </div>
   );

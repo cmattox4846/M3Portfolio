@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { ReactTypical } from "@deadcoder0904/react-typical";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Footer from "../Home/Footer/Footer";
 
 import "./ContactMe.css";
 import imgBack from "../../../src/images/mailz.jpeg";
@@ -13,7 +14,7 @@ import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
+    if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
 
@@ -66,29 +67,29 @@ const response = await axios.post('./contact', data)
 
 
   return (
-    <div className="main-container" id={props.id || ""}>
+    <div className="main-container fade-in" id={props.id || ""}>
       <ScreenHeading title={"Contact Me"} subHeading={"Lets Keep In Touch"} />
       <div className="central-form">
         <div className="col">
           <h2 className="title">
             {""}
-            <ReactTypical loop={Infinity} steps={["Get In Touch ", 2000]} />
+            <ReactTypical loop={Infinity} steps={["Get In Touch ", 2000, "How Can I Work For You? ", 2000]} />
           </h2>
           <a href="#">
-            <i className="fa fa-facebook-square"></i>
+            <i className="fa fa-linkedin"></i>
           </a>
           <a href="#">
-            <i className="fa fa-google-plus"></i>
+            <i className="fa fa-github"></i>
           </a>
-          <a href="#">
+          {/* <a href="#">
             <i className="fa fa-instagram"></i>
-          </a>
+          </a> */}
           <a href="#">
             <i className="fa fa-youtube-square"></i>
           </a>
-          <a href="#">
+          {/* <a href="#">
             <i className="fa fa-twitter"></i>
-          </a>
+          </a> */}
         </div>
         <div className="back-form">
             <div className="img-back">
@@ -120,6 +121,9 @@ const response = await axios.post('./contact', data)
                 </div>
             </form>
         </div>
+      </div>
+      <div>
+      <Footer />
       </div>
     </div>
   );
